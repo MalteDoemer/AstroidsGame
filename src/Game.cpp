@@ -133,7 +133,7 @@ class Astroids : public ConsoleApp
                 // Check against every bullet if they collide
                 for (auto &b : bullets)
                 {
-                    if ((b.pos - a.pos).mag() < a.radius)
+                    if ((b.pos - a.pos).mag() < a.radius + 1)
                     {
                         a.remove = true;
                         b.remove = true;
