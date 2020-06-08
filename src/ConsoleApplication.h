@@ -1,7 +1,6 @@
 #pragma once
 #include "olcVec2d.h"
 #include <Windows.h>
-//#include <cmath>
 #include <thread>
 #include <chrono>
 #include <sstream>
@@ -297,13 +296,13 @@ namespace Pixels
 
 } // namespace Pixels
 
-struct VirtualKey
+struct VIRTUAL_KEY
 {
 	int keyCode;
 	int state;
 	int preState;
 
-	VirtualKey() = default;
+	VIRTUAL_KEY() = default;
 
 	void Update()
 	{
@@ -429,7 +428,6 @@ public:
 		if (x >= 0 && x <= width && y >= 0 && y <= height)
 			data[y * width + x] = p;
 	}
-
 	Pixel SamplePixel(float x, float y)
 	{
 		x = x - floorf(x);
@@ -453,8 +451,7 @@ protected:
 	CONSOLE_CURSOR_INFO cci;
 	CONSOLE_SCREEN_BUFFER_INFO csbi;
 	CONSOLE_SCREEN_BUFFER_INFOEX csbix;
-	VirtualKey keys[MAX_KEYS];
-
+	VIRTUAL_KEY keys[MAX_KEYS];
 	INPUT_RECORD records[32];
 
 	std::wstring appName = L"Default";
