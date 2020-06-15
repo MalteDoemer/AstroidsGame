@@ -5,7 +5,7 @@ It is a game that runs in the windows command prompt written in C++.
 
 ## Installation
 
-Not to install yet.
+Download bin/Game.zip.
 
 ## License
 
